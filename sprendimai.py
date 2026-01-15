@@ -253,3 +253,18 @@ def generate_rnd_str(length):
     text += symbols[random.randint(0,len(symbols) -1)]
   return text
 
+rnd_str = generate_rnd_str(10)
+print("Sugeneruotas stringas:", rnd_str)
+print("\nRezultatas:\n")
+
+i = 0
+while i < len(rnd_str):
+    if rnd_str[i].isdigit():
+        j = i
+        while j < len(rnd_str) and rnd_str[j].isdigit():
+            j += 1
+        print(f"[{rnd_str[i:j]}]")
+        i = j
+    else:
+        print(rnd_str[i])
+        i += 1
