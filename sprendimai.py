@@ -268,3 +268,19 @@ while i < len(rnd_str):
     else:
         print(rnd_str[i])
         i += 1
+
+#Parašykite funkciją, kuri skaičiuotų, ir gražintų iš kiek sveikų skaičių jos argumentas dalijasi be liekanos
+#(išskyrus vienetą ir patį save). Pvz padavus 10 turi grąžinti 2,  o padavus 20 gražintų 4.
+print('-------3-------')
+
+def calculate_divisors(number):
+
+    divisors_number = 0
+    for divisors in range(2, number):
+        if number % divisors == 0:
+            divisors_number += 1
+    return divisors_number
+
+print(f"Skaičiaus 10 daliklių skaičius (išskyrus 1 ir 10): {calculate_divisors(10)}")
+print(f"Skaičiaus 20 daliklių skaičius (išskyrus 1 ir 20): {calculate_divisors(20)}")
+print(f"Skaičiaus 7 daliklių skaičius (išskyrus 1 ir 7): {calculate_divisors(7)}")
